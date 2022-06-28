@@ -44,6 +44,7 @@ namespace MaintainingAddressBook
         {
             addressBook.Add(contact);
         }
+        //display the information in address book
         public void Display()
         {
             foreach (var contact in addressBook)
