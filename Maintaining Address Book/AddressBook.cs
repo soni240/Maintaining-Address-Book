@@ -9,6 +9,7 @@ namespace MaintainingAddressBook
     public class AddressBook
     {
         List<Contact> addressBook = new List<Contact>();
+        Dictionary<string, List<Contact>> dictionaryName = new Dictionary<string, List<Contact>>();
         public AddressBook()
         {
             Contact address1 = new Contact()
@@ -100,9 +101,11 @@ namespace MaintainingAddressBook
             }
         }
 
-        // Delete the information in address book
-        public void DeletingContactINAddressBook(string name)
-        {
+                
+                /// Deletings the contact in address book.
+       
+            public void DeletingContactINAddressBook(string name)
+            {
             Contact delete = new Contact();
             foreach (var contact in addressBook)
             {
@@ -113,8 +116,32 @@ namespace MaintainingAddressBook
             }
             addressBook.Remove(delete);
             Display();
-        }
+            }
 
+        // add person details one at a time
+        public void AddDictionary(string name)
+        {
+            if (dictionaryName == null)
+            {
+                dictionaryName.Add(name, addressBook);
+            }
+            if (NameExists(name) == false)
+            {
+                dictionaryName.Add(name, addressBook);
+            }
+            Console.WriteLine(dictionaryName);
+        }
+        public bool NameExists(string name)
+        {
+            foreach (var data in dictionaryName.Keys)
+            {
+                if (data.Equals(name))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
 
