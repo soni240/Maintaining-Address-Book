@@ -9,11 +9,11 @@ public class Program
         AddressBook addressBook = new AddressBook();
         Console.WriteLine("Please Enter the Information");
         bool check = true;
-        Console.WriteLine(" Enter the Zero to Stop The Execution 0\n Display The Information1\n Edit the Information 2\n");
+        Console.WriteLine(" Enter the Zero to Stop The Execution 0\n Display The Information1\n Edit the Information 2\n Delete The Information 3\n");
 
         while (check)
         {
-            Console.WriteLine("***** Please Enter The Above Information *******");
+            Console.WriteLine("***** Please Enter The Above Option *******");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -22,6 +22,10 @@ public class Program
                     Console.WriteLine("Enter the Name for Edit the Information");
                     string name = Console.ReadLine();
                     addressBook.EditContactInAddressBook(name); break;
+                case 3:
+                    Console.WriteLine("Enter the Name for Delete the Information");
+                    string name1 = Console.ReadLine();
+                    addressBook.DeletingContactINAddressBook(name1); break;
                 case 0: check = false; break;
             }
 
