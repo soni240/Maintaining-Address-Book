@@ -9,7 +9,7 @@ public class Program
         AddressBook addressBook = new AddressBook();
         Console.WriteLine("Please Enter the Information");
         bool check = true;
-        Console.WriteLine(" Enter the Zero to Stop The Execution 0\n Display The Information1\n Edit the Information 2\n Delete The Information 3\n Add Data in the Dictionary 4\n EditingDictionary Data in the AddressBook 5\n  Deleting data from Dictionary 6\n Searching Person in City 8\n Searching Person Details With The Name Of City 9\n Displaying Contact Number 10\n Sorting the Data By the Person Name 11\n");
+        Console.WriteLine(" Enter the Zero to Stop The Execution 0\n Display The Information1\n Edit the Information 2\n Delete The Information 3\n Add Data in the Dictionary 4\n EditingDictionary Data in the AddressBook 5\n  Deleting data from Dictionary 6\n Searching Person in City 8\n Searching Person Details With The Name Of City 9\n Displaying Contact Number 10\n Sorting the Person Data by thge City 12\n");
 
         while (check)
         {
@@ -54,9 +54,9 @@ public class Program
                     string enterCityName = Console.ReadLine();
                     addressBook.GetPhoneNumberByCity(enterCityName); break;
                     break;
-                case 11:
-
-                    addressBook.SortingDataByPersonName(); break;
+                case 12:
+                    Console.WriteLine("Enter the City Name And State name for Sorting the  Person Details ");
+                    addressBook.SortingCityAndState(); break;
                     break;
                 case 0: check = false; break;
                 default: Console.WriteLine("Please Enter the Valid Option"); break;
@@ -65,3 +65,5 @@ public class Program
         }
     }
 }
+
+

@@ -8,10 +8,12 @@ namespace MaintainingAddressBook
 {
     public class AddressBook
     {
+        Contact contacts = new Contact();
         List<Contact> addressBook = new List<Contact>();
         Dictionary<string, List<Contact>> dictionaryName = new Dictionary<string, List<Contact>>();
         Dictionary<string, string> cityPerson = new Dictionary<string, string>();
         List<string> firstName = new List<string>();
+        List<string> cityState = new List<string>();
         public AddressBook()
         {
             Contact address1 = new Contact()
@@ -27,13 +29,13 @@ namespace MaintainingAddressBook
             };
             Contact address2 = new Contact()
             {
-                FirstName = "Pramod",
+                FirstName = "Anuj",
                 LastName = "Pratap",
                 Address = "Haryana",
-                City = "Luck",
+                City = "Allahabad",
                 State = "Delhi",
                 EmailAddress = "pramod123@gmail.com",
-                PostalCode = 400009,
+                PostalCode = 100009,
                 MobileNumber = 9722945611
             };
             //Console.WriteLine("Enter the FirstName LastName Address City State Email postalCode mobile Number");
@@ -195,9 +197,9 @@ namespace MaintainingAddressBook
                 }
             }
         }
-        public void SortingDataByPersonName()
+        public void SortingCityAndState()
         {
-            var result = addressBook.OrderBy(x => x.FirstName).ToList();
+            var result = this.addressBook.OrderBy(x => x.City).ToList();
             foreach (var contact in result)
             {
                 Console.WriteLine(contact.FirstName + " " + contact.LastName + " " + contact.Address + " " + contact.City + " " + contact.State + " " + contact.EmailAddress + " " + " " + contact.PostalCode + " " + contact.MobileNumber);
@@ -206,4 +208,3 @@ namespace MaintainingAddressBook
         }
     }
 }
-
