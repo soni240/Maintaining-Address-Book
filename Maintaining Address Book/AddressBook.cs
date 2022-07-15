@@ -11,7 +11,7 @@ namespace MaintainingAddressBook
         List<Contact> addressBook = new List<Contact>();
         Dictionary<string, List<Contact>> dictionaryName = new Dictionary<string, List<Contact>>();
         Dictionary<string, string> cityPerson = new Dictionary<string, string>();
-        Dictionary<string, string> statePerson = new Dictionary<string, string>();
+        List<string> firstName = new List<string>();
         public AddressBook()
         {
             Contact address1 = new Contact()
@@ -195,5 +195,15 @@ namespace MaintainingAddressBook
                 }
             }
         }
+        public void SortingDataByPersonName()
+        {
+            var result = addressBook.OrderBy(x => x.FirstName).ToList();
+            foreach (var contact in result)
+            {
+                Console.WriteLine(contact.FirstName + " " + contact.LastName + " " + contact.Address + " " + contact.City + " " + contact.State + " " + contact.EmailAddress + " " + " " + contact.PostalCode + " " + contact.MobileNumber);
+
+            }
+        }
     }
 }
+
