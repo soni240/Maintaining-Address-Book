@@ -43,6 +43,10 @@ public class Program
                     Console.WriteLine("Enter the City Name for Searchin Person City in Dictionary ");
                     string cityName = Console.ReadLine();
                     addressBook.SearchingPersonInCity(cityName); break;
+                case 9:
+                    Console.WriteLine("Enter the City Name for Searchin Person City in Dictionary ");
+                    string city = Console.ReadLine();
+                    addressBook.MaintingDictionaryWithCityAndPerson(city); break;
                 case 0: check = false; break;
                 default: Console.WriteLine("Please Enter the Valid Option"); break;
             }
@@ -50,4 +54,5 @@ public class Program
         }
     }
 }
+
 
