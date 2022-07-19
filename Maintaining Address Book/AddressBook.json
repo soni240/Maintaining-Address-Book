@@ -1,0 +1,52 @@
+[
+    {
+        "FirstName": "vinay",
+        "LastName": "kumar",
+        "Address": "VikasNagar",
+        "City": "Lucknow",
+        "State": "UtterPradesh",
+        "EmailAddress": "vinaykumar15874@gmail.com",
+        "PostalCode": 85214,
+        "MobileNumber": 7108102054
+    },
+    {
+        "FirstName": "Raj",
+        "LastName": "Pratap",
+        "Address": "Gomatinagar",
+        "City": "Lucknow",
+        "State": "UtterPradesh",
+        "EmailAddress": "rajkumar15874@gmail.com",
+        "PostalCode": 88214,
+        "MobileNumber": 7508102054
+    },
+    {
+        "FirstName": "Vijay",
+        "LastName": "kumar",
+        "Address": "LekhRaj",
+        "City": "Lucknow",
+        "State": "UtterPradesh",
+        "EmailAddress": "vijaykumar15874@gmail.com",
+        "PostalCode": 85114,
+        "MobileNumber": 7102102054
+    },
+    {
+        "FirstName": "Shanker",
+        "LastName": "kumar",
+        "Address": "RajajiPuram",
+        "City": "Lucknow",
+        "State": "UtterPradesh",
+        "EmailAddress": "shankerkumar15874@gmail.com",
+        "PostalCode": 85214,
+        "MobileNumber": 7108802054
+    },
+    {
+        "FirstName": "Ritesh",
+        "LastName": "Roy",
+        "Address": "AmbedkarPark",
+        "City": "Lucknow",
+        "State": "UtterPradesh",
+        "EmailAddress": "riteshkumar15874@gmail.com",
+        "PostalCode": 852154,
+        "MobileNumber": 7158102054
+    }
+]
