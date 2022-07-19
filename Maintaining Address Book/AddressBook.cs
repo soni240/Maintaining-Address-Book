@@ -14,6 +14,7 @@ namespace MaintainingAddressBook
         Dictionary<string, string> cityPerson = new Dictionary<string, string>();
 
         const string FILE_PATH = @"D:\RFP 161 .net\Maintaining Address book\MaintainingAddressBook\AddressBook.txt";
+        const string EXPORT_JSON_FILE_PATH = @"D:\RFP 161 .net\Maintaining Address book\MaintainingAddressBook\AddressBookExport.csv";
         const string IMPORT_CSV_FILE_PATH = @"D:\RFP 161 .net\Maintaining Address book\MaintainingAddressBook\AddressBook.csv";
         const string EXPORT_CSV_FILE_PATH = @"D:\RFP 161 .net\Maintaining Address book\MaintainingAddressBook\AddressBookExport.csv";
         public AddressBook()
@@ -243,6 +244,29 @@ namespace MaintainingAddressBook
                         using (var CsvExport = new CsvWriter(writer, CultureInfo.InvariantCulture))
                         {
                             CsvExport.WriteRecords(records);
+
+                        }
+                    }
+                }
+            }
+        }
+        public void ReadingDataFromCSVAndWritingDataIntoJSONFile()
+        {
+            using (var reader = new StreamReader(IMPORT_CSV_FILE_PATH))
+            {
+                using (var Csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+                {
+                    var records = Csv.GetRecords<Contact>().ToList();
+                    foreach (var contact in records)
+                    {
+                        Console.WriteLine(contact.FirstName + " " + contact.LastName + " " + contact.Address + " " + contact.City + " " + contact.State + " " + contact.EmailAddress + " " + " " + contact.PostalCode + " " + contact.MobileNumber);
+                    }
+                    JsonSerializer serializer = new JsonSerializer();
+                    using (var writer = new StreamWriter(EXPORT_JSON_FILE_PATH))
+                    {
+                        using (var jsonWriter = new JsonTextWriter(writer))
+                        {
+                            serializer.Serialize(writer, records);
 
                         }
                     }
