@@ -4,4 +4,3 @@ Raj,Pratap,Gomatinagar,Lucknow,UtterPradesh,rajkumar15874@gmail.com,88214,750810
 Vijay,kumar,LekhRaj,Lucknow,UtterPradesh,vijaykumar15874@gmail.com,85114,7102102054
 Shanker,kumar,RajajiPuram,Lucknow,UtterPradesh,shankerkumar15874@gmail.com,85214,7108802054
 Ritesh,Roy,AmbedkarPark,Lucknow,UtterPradesh,riteshkumar15874@gmail.com,852154,7158102054
-
